@@ -66,7 +66,7 @@ def update_chart(site_dropdown):
     else:
         filtered_df = spacex_df[spacex_df['Launch Site'] == site_dropdown]
         filtered_df = px.filtered_df.groupby(['Launch Site', 'class'])
-        piechart = px.pie(filtered_df, values='class', names='Launch Site')
+        piechart = px.pie(filtered_df, values='class count', names='Launch Site')
         return piechart
 
 
